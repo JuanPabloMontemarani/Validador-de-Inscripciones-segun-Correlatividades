@@ -1,0 +1,29 @@
+@startuml
+
+
+Inscripcion -->"*" Materia
+Alumno -->"*" Materia
+Inscripcion --> Alumno
+Materia -->"*" Materia
+
+class Inscripcion{
+- alumno : Alumno
+- materiasACursar : HashSet<Materia>
+
++ aprobada() : Boolean
+
+}
+
+class Materia{
+- nombre : String
+- materiasCorrelativas : HashSet<Materia>
+}
+
+class Alumno{
+- nombre : String
+- apellido : String
+- aprobadas : HashSet<Materias>
+
++ puedeCursar(materia : Materia) : Boolean
+}
+@enduml
