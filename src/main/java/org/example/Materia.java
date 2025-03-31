@@ -1,5 +1,8 @@
 package org.example;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashSet;
 
 public class Materia {
@@ -11,7 +14,7 @@ public class Materia {
         this.materiasCorrelativas = materiasCorrelativas;
     }
 
-    public boolean cumpleCorrelativas(HashSet<Materia> aprobadas){
+    public Boolean cumpleCorrelativas(HashSet<Materia> aprobadas){
         return aprobadas.containsAll(materiasCorrelativas);
     }
 }

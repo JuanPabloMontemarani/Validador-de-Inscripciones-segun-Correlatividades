@@ -1,5 +1,8 @@
 package org.example;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashSet;
 
 public class Alumno {
@@ -13,7 +16,7 @@ public class Alumno {
         this.aprobadas = aprobadas;
     }
 
-    public boolean puedeCursar(Materia materia){
+    public Boolean puedeCursar(Materia materia){
         return materia.cumpleCorrelativas(aprobadas);
     }
 }

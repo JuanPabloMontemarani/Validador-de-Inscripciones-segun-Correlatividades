@@ -1,5 +1,8 @@
 package org.example;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashSet;
 
 public class Inscripcion {
@@ -12,7 +15,7 @@ public class Inscripcion {
         this.materiasACursar = materiasACursar;
     }
 
-    public boolean aprobada() {
+    public Boolean aprobada() {
         return materiasACursar
                 .stream()
                 .allMatch(materia -> alumno.puedeCursar(materia));
